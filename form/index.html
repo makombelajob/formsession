@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulaire d'Inscription</title>
+        <script src="js/script.js" defer></script>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <main>
+            <h1>M'inscrire</h1>
+            <form action method="post">
+                <div>
+                    <label for="nickname">Pseudo</label>
+                    <div class="input-group">
+                        <input type="text" name="nickname" id="nickname">
+                        <div class="valid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--success)">
+                                <use xlink:href="images/sprite.svg#valid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--danger)">
+                                <use
+                                    xlink:href="images/sprite.svg#invalid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid-feedback">
+                            Le pseudo doit faire au moins 5 caractères
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email">E-mail</label>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email">
+                        <div class="valid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--success)">
+                                <use xlink:href="images/sprite.svg#valid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--danger)">
+                                <use
+                                    xlink:href="images/sprite.svg#invalid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid-feedback">
+                            Ceci n'est pas une adresse e-mail
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="pass">Mot de passe</label>
+                    <div class="input-group">
+                        <input type="password" name="pass" id="pass">
+                        <div class="valid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--success)">
+                                <use xlink:href="images/sprite.svg#valid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid">
+                            <svg width="30" height="30"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="var(--danger)">
+                                <use
+                                    xlink:href="images/sprite.svg#invalid"></use>
+                            </svg>
+                        </div>
+                        <div class="invalid-feedback">
+                            Le mot de passe doit faire au moins 16 caractères
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="rgpd" id="rgpd">
+                    <label for="rgpd">En cliquant sur le bouton "M'inscrire",
+                        j'accepte la collecte de mes données
+                        personnelles...</label>
+                    <div class="invalid-feedback">
+                        La case doit être cochée
+                    </div>
+                </div>
+                <button type="submit" disabled>M'inscrire</button>
+            </form>
+            <button id="reset">Reset Session</button>
+        </main>
+    </body>
+</html>

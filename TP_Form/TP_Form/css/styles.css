@@ -1,0 +1,105 @@
+:root {
+    --success: green;
+    --danger: red;
+    --border: 2px solid grey;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    #main {
+        border: var(--border);
+        padding: 20px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px grey;
+        width: 70%;
+        h1 {
+            margin-top: 0.5rem;
+        }
+        form {
+            > div {
+                margin-bottom: 1rem;
+            }
+            input {
+                &:not([type="checkbox"]) {
+                    width: 100%;
+                    font-size: 1.5rem;
+                    border-radius: 18px;
+                    border: var(--border);
+                    padding: 5px 10px;
+                }
+
+                &.is-valid {
+                    ~ .valid {
+                        display: initial;
+                    }
+                }
+                &.is-invalid {
+                    ~ .invalid {
+                        display: initial;
+                    }
+                    ~ .invalid-feedback {
+                        display: block;
+                    }
+                }
+            }
+            .input-group {
+                position: relative;
+                .valid,
+                .invalid {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    display: none;
+                }
+            }
+            .invalid-feedback {
+                color: var(--danger);
+                display: none;
+            }
+        }
+    }
+    .button {
+        border: var(--border);
+        border-radius: 18px;
+        padding: 5px 10px; 
+    }
+    #reset{
+        margin-top: 30px;
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.541);
+            }
+        }
+    }
+    #afficher {
+        margin-top: 30px;
+        border: var(--border);
+        padding: 20px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px grey;
+        width: 70%;
+        background-color: rgba(38, 97, 94, 0.616);
+        color: white;
+        &.hide{
+            display: none;
+        }
+        &.active{
+            display: block;
+        }
+    }
+}
